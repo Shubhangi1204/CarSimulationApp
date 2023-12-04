@@ -8,9 +8,9 @@ namespace SimulationCarApp
 		static string commands;
 		static int x = 0, y = 0;
 		static char direction = char.MinValue;
+		static bool validInput = false;
 		static void Main()
 		{
-			var validInput = false;
 			Console.WriteLine("Enter the width and height of the field (Format should be e.g. 10 10)");
 			int width = 0, height = 0;
 			string[] dimensions;
@@ -46,7 +46,7 @@ namespace SimulationCarApp
 
 		static void GetStartPositions()
 		{
-			var validInput = false;
+			validInput = false;
 
 			Console.WriteLine("Enter the current position and facing direction of the car (e.g. 1 2 N)");
 			string inputCarPosition = Console.ReadLine();
@@ -72,7 +72,7 @@ namespace SimulationCarApp
 
 		static string GetCommands()
 		{
-			var validInput = false;
+			validInput = false;
 
 			Console.WriteLine("Enter the subsequent commands you want car to execute (e.g. FFRFFFRRLF)");
 			string commands = Console.ReadLine();
