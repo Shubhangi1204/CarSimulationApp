@@ -37,5 +37,13 @@ namespace SimulationCarApp
 
 			Assert.AreEqual('E', _carObj.Direction);
 		}
+
+		[Test]
+		public void TestExecuteCommands()
+		{
+			_carObj.ExecuteCommands("FFRFFFRRLF");
+
+			Assert.AreEqual("4 3 S", _carObj.ToString());
+		}
 	}
 }
